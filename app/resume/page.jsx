@@ -11,7 +11,7 @@ import {
   FaMdb,
 } from "react-icons/fa";
 
-import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { SiTailwindcss, SiNextdotjs, SiBootstrap } from "react-icons/si";
 const about = {
   title: "About me",
   description:
@@ -26,12 +26,12 @@ const about = {
       fieldValue: "(+1) 825 288 2786",
     },
     {
-      fieldName: "Email",
-      fieldValue: "maleksameer715@gmail.com",
-    },
-    {
       fieldName: "Github",
       fieldValue: "SameerMalek",
+    },
+    {
+      fieldName: "Email",
+      fieldValue: "maleksameer715@gmail.com",
     },
     {
       fieldName: "Languages",
@@ -56,16 +56,6 @@ const education = {
       duration: "April, 2023 - Dec, 2024",
     },
     {
-      institution: "Southern Alberta Institute of Technology",
-      degree: "Diploma in Software Development",
-      duration: "April, 2023 - Dec, 2024",
-    },
-    {
-      institution: "Southern Alberta Institute of Technology",
-      degree: "Diploma in Software Development",
-      duration: "April, 2023 - Dec, 2024",
-    },
-    {
       institution: "Hanifa English Medium School",
       degree: "H.S.C - CBSE Board",
       duration: "April, 2023 - Dec, 2024",
@@ -79,7 +69,7 @@ const education = {
 };
 
 const skills = {
-  title: "My skills",
+  title: "My Skills",
   description:
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam cumque atque magnam delectus earum. Laudantium, qui",
   skillList: [
@@ -127,6 +117,10 @@ const skills = {
       icon: <FaPython />,
       name: "python",
     },
+    {
+      icon: <SiBootstrap/>,
+      name: "Bootstrap",
+    },
   ],
 };
 
@@ -138,7 +132,6 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import {} from "@/components/ui/scroll-area";
 import { delay, easeIn, motion } from "framer-motion";
 import { ScrollArea } from "@/components/ui/scroll-area";
 function Resume() {
@@ -149,7 +142,7 @@ function Resume() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[70vh] flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs defaultValue="education"
@@ -167,14 +160,14 @@ function Resume() {
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                   {education.description}
                 </p>
-                <ScrollArea className="h-[400px]">
+                <ScrollArea className="h-[329px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
                     {education.items.map((item, index) => {
                       return (
                       <li key={index} className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1">
                         <span className="text-accent">{item.duration}</span>
                         <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">{item.degree}</h3>
-                        <div>
+                        <div className="flex items-center gap-3">
                           <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                           <p className="text-white/60">{item.institution}</p>
                         </div>
@@ -183,6 +176,51 @@ function Resume() {
                   </ul>
                 </ScrollArea>
               </div>
+            </TabsContent>
+            <TabsContent value="skills" className="w-full h-full">
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+                </div>
+                <ScrollArea className="h-[329px]">
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.skillList.map((skill,index)=>{
+                    return (
+                      <li key={index}>
+                      <TooltipProvider delayDuration={100}>
+                        <Tooltip>
+                          <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                            <div className="text-6xl group-hover:text-accent transition-all duration-300">{skill.icon}</div>
+                          </TooltipTrigger>
+                          <TooltipContent>
+                            <p>{skill.name}</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
+                </ScrollArea>
+              </div>
+            </TabsContent>
+            <TabsContent value="about" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{about.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}
+                </p>
+              </div>
+              <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 ">
+                {about.info.map((item,index)=>{
+                  return (
+                    <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <span className="text-white/60">{item.fieldName}</span>
+                      <span className="text-xl">{item.fieldValue}</span>
+                    </li>
+                  )
+                })}
+              </ul>
             </TabsContent>
             </div>
         </Tabs>
