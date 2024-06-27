@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import WorkSlider from './../../components/ui/workSlider';
+import WorkSlider from '@/components/WorkSlider.jsx';
 import {
   Tooltip,
   TooltipContent,
@@ -78,7 +78,7 @@ const projects = [
   },
 ];
 
-function Projects() {
+function Project() {
   const [project, setProject] = useState(projects[0]);
 
   const handleSlideChange = (swiper) => {
@@ -106,7 +106,7 @@ function Projects() {
                 {project.category} project
               </h2>
               <p className="text-white/60">{project.description}</p>
-              <ul className="flex gap-4">
+              <ul className="xl:flex flex-wrap gap-4">
                 {project.stack.map((item, index) => {
                   return (
                     <li key={index} className="text-xl text-accent">
@@ -180,4 +180,4 @@ function Projects() {
   );
 }
 
-export default Projects;
+export default Project;

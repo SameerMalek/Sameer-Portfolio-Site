@@ -10,10 +10,10 @@ const Home = () => {
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
-            <h1 className="h21 mb-6">Hi, I'm</h1>
+            <h1 className="h21 mb-6">Hi, I am</h1>
             <TypeAnimation
               sequence={[
-                "Front-End",
+                "Frontend",
                 2000,
                 "Backend",
                 2000,
