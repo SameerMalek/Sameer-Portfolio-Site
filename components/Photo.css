@@ -1,0 +1,8 @@
+.remove-background {
+    background: none !important; 
+  }
+
+.mix-blend-remove {
+    mix-blend-mode: lighten;
+  }
+  
