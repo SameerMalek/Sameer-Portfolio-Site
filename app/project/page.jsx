@@ -58,13 +58,13 @@ const projects = [
       { name: "Javascript" },
       { name: "React.js" },
     ],
-    video: "/assets/project/project-1.mp4",
-    live: "",
-    github: "",
+    video: "/assets/project/project-3.png",
+    live: "https://text-formatting-site.vercel.app/",
+    github: "https://github.com/SameerMalek/Text-Formatting-Site",
   },
   {
     num: "04",
-    category: "backend",
+    category: "Backend",
     title: "Project 4",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
@@ -74,9 +74,9 @@ const projects = [
       { name: "Javascript" },
       { name: "Node.js" },
     ],
-    video: "/assets/project/project-1.mp4",
-    live: "",
-    github: "",
+    video: "/assets/project/project-4.mp4",
+    live: "https://github.com/SameerMalek/QuickLink",
+    github: "https://github.com/SameerMalek/QuickLink",
   },
 ];
 
