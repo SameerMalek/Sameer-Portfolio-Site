@@ -5,6 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import { FiDownload } from "react-icons/fi";
 import Photo from "@/components/Photo";
 const Home = () => {
+  const cvUrl = "/CV.pdf";
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -32,6 +33,11 @@ const Home = () => {
               proficient in various programming languages and technologies.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
+            <a
+                href={cvUrl}
+                download
+                className="uppercase flex items-center gap-2 hover:transition-all duration-500"
+              >
               <Button
                 variant="outline"
                 size="lg"
@@ -40,6 +46,7 @@ const Home = () => {
                 <span>Download CV</span>
                 <FiDownload className="text-xl" />
               </Button>
+              </a>
               <div className="mb-8 xl:mb-0">
                 <Socials
                   containerStyles="flex gap-6"

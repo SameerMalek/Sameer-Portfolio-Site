@@ -9,6 +9,7 @@ import {
   FaJava,
   FaPython,
   FaMdb,
+  FaCsharp
 } from "react-icons/fa";
 
 import { SiTailwindcss, SiNextdotjs, SiBootstrap } from "react-icons/si";
@@ -19,7 +20,7 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Sameer Malek",
+      fieldValue: "Mohammad Sameer Malek",
     },
     {
       fieldName: "Phone",
@@ -35,12 +36,21 @@ const about = {
     },
     {
       fieldName: "Languages",
-      fieldValue: "English, Hindi, Urdu, Gujarati, Arabic",
+      fieldValue: "English, Hindi, Urdu, Gujarati",
     },
     {
       fieldName: "Freelance",
       fieldValue: "Available",
     },
+    {
+      fieldName: "LinkedIn",
+      fieldValue: "Mohammad Sameer Malek",
+    },
+    {
+      fieldName: "Nationality",
+      fieldValue: "Indian",
+    },
+
   ],
 };
 
@@ -51,19 +61,19 @@ const education = {
     "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, quibusdam iusto itaque sit doloremque corrupti. Consectetur esse deserunt nemo voluptate vitae reprehenderit, labore commodi laborum, harum perspiciatis, similique corporis doloribus.",
   items: [
     {
-      institution: "Southern Alberta Institute of Technology",
-      degree: "Diploma in Software Development",
-      duration: "April, 2023 - Dec, 2024",
+      institution: "Southern Alberta Institute of Technology, AB, Canada",
+      degree: "Diploma - Software Development",
+      duration: "April, 2023 - Present",
     },
     {
-      institution: "Hanifa English Medium School",
-      degree: "H.S.C - CBSE Board",
-      duration: "April, 2023 - Dec, 2024",
+      institution: "Hanifa English Medium School, Guj , India",
+      degree: "Higher Secondary Education - (CBSE)",
+      duration: "April, 2020 - April, 2021",
     },
     {
-      institution: "Hanifa English Medium School",
-      degree: "S.S.C - CBSE Board",
-      duration: "April, 2023 - Dec, 2024",
+      institution: "Hanifa English Medium School, Guj , India",
+      degree: "Senior Secondary Education - (CBSE)",
+      duration: "April, 2018 - April, 2019",
     },
   ],
 };
@@ -120,7 +130,7 @@ const skills = {
     {
       icon: <SiBootstrap/>,
       name: "Bootstrap",
-    },
+    }
   ],
 };
 

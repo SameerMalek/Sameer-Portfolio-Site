@@ -17,35 +17,38 @@ import {
 const projects = [
   {
     num: "01",
-    category: "frontend",
+    category: "React.Js",
     title: "Project 1",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
-    stack: [{ name: "Html 5" }, { name: "Css" }, { name: "Javascript" }],
+    stack: [{ name: "React.js" },{ name: "Html" }, { name: "Bootstrap" },{ name: "CSS" }, { name: "Javascript" }],
     video: "/assets/project/project-1.mp4",
-    live: "",
-    github: "",
+    live: "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
+    github: "https://github.com/SameerMalek/Taza-Khabar-NewsSite",
   },
   {
     num: "02",
-    category: "fullstack",
+    category: "MERN-stack", 
     title: "Project 2",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
     stack: [
-      { name: "Html 5" },
+      { name: "Html" },
       { name: "Css" },
       { name: "Javascript" },
       { name: "React.js" },
+      { name: "Express.js" },
       { name: "Node.js" },
+      { name: "MongoDB" },
+      { name: "WebSocket.io" },
     ],
     video: "/assets/project/project-2.mp4",
-    live: "",
-    github: "",
+    live: "https://www.linkedin.com/feed/update/urn:li:activity:7202656339985063936/",
+    github: "https://github.com/SameerMalek/Estate-Ease-FullStack",
   },
   {
     num: "03",
-    category: "fullstack",
+    category: "Frontend",
     title: "Project 3",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
@@ -54,7 +57,6 @@ const projects = [
       { name: "Css" },
       { name: "Javascript" },
       { name: "React.js" },
-      { name: "Node.js" },
     ],
     video: "/assets/project/project-1.mp4",
     live: "",
@@ -118,19 +120,19 @@ function Project() {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-                <Link href={project.live}>
+                <Link  target="_blank" href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
                         <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
                       </TooltipTrigger>
                       <TooltipContent>
-                        <p>Live Project</p>
+                        <p>Visit Project</p>
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                <Link href={project.github}>
+                <Link target="_blank" href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
