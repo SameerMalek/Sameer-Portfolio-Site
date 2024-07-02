@@ -2,7 +2,7 @@
 import { delay, motion } from "framer-motion";
 import React, { useState } from "react";
 import Link from "next/link";
-
+import {FaLinkedinIn} from "react-icons/fa"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
@@ -20,10 +20,10 @@ const projects = [
     category: "React.Js",
     title: "Project 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
+      "TazaKhabar is a live news site developed with React.js, fetching data from the News API to display news across various categories.",
     stack: [{ name: "React.js" },{ name: "Html" }, { name: "Bootstrap" },{ name: "CSS" }, { name: "Javascript" }],
     video: "/assets/project/project-1.mp4",
-    live: "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
     github: "https://github.com/SameerMalek/Taza-Khabar-NewsSite",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     category: "MERN-stack", 
     title: "Project 2",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
+      "Estate-Ease optimizes property transactions with a robust backend that manages server logic, data, APIs for property listings, and secure user authentication.",
     stack: [
       { name: "Html" },
       { name: "Css" },
@@ -43,22 +43,22 @@ const projects = [
       { name: "WebSocket.io" },
     ],
     video: "/assets/project/project-2.mp4",
-    live: "https://www.linkedin.com/feed/update/urn:li:activity:7202656339985063936/",
+    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7202656339985063936/",
     github: "https://github.com/SameerMalek/Estate-Ease-FullStack",
   },
   {
     num: "03",
-    category: "Frontend",
+    category: "React.Js",
     title: "Project 3",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
+      "TextUtils is a text formatting tool built with React and React Router DOM, simplifies text manipulation with features like text capitalization, spacing adjustments, and easy clipboard copying for enhanced usability.",
     stack: [
-      { name: "Html 5" },
+      { name: "Html" },
       { name: "Css" },
       { name: "Javascript" },
       { name: "React.js" },
     ],
-    video: "/assets/project/project-3.png",
+    video: "/assets/project/project-3.mp4",
     live: "https://text-formatting-site.vercel.app/",
     github: "https://github.com/SameerMalek/Text-Formatting-Site",
   },
@@ -67,15 +67,15 @@ const projects = [
     category: "Backend",
     title: "Project 4",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, est!",
+      "QuickLink generates short, unique IDs for URLs using the npm package 'shortid', facilitating easy search and retrieval of specific URLs.",
     stack: [
-      { name: "Html 5" },
+      { name: "Html" },
       { name: "Css" },
       { name: "Javascript" },
       { name: "Node.js" },
+      { name: "EJS" }
     ],
     video: "/assets/project/project-4.mp4",
-    live: "https://github.com/SameerMalek/QuickLink",
     github: "https://github.com/SameerMalek/QuickLink",
   },
 ];
@@ -95,7 +95,7 @@ function Project() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex flex-col justify-center pt-[2rem] pb-[1rem] xl:px-0"
+      className="min-h-[80vh] flex flex-col justify-center pt-[2rem] pb-[5rem] xl:px-0"
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px] xl:h-[475px] ">
@@ -120,7 +120,7 @@ function Project() {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-                <Link  target="_blank" href={project.live}>
+               {project.live && ( <Link  target="_blank" href={project.live}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
                       <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -131,7 +131,8 @@ function Project() {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
-                </Link>
+                </Link>)}
+               
                 <Link target="_blank" href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -144,6 +145,18 @@ function Project() {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
+                {project.linkedin && ( <Link  target="_blank" href={project.linkedin}>
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <FaLinkedinIn className="text-white text-3xl group-hover:text-accent" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>Visit Project on LinkedIn</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>)}
               </div>
             </div>
           </div>

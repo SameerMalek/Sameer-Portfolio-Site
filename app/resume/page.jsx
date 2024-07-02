@@ -16,7 +16,7 @@ import { SiTailwindcss, SiNextdotjs, SiBootstrap } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, quibusdam iusto itaque sit doloremque corrupti. Consectetur esse deserunt nemo voluptate vitae reprehenderit, labore commodi laborum, harum perspiciatis, similique corporis doloribus.",
+    "I am Mohammad Sameer Malek, a Software Development enthusiast fluent in English, Hindi, Urdu, and Gujarati. Currently available for Software Developer or Fullstack developer related roles. I am based in Calgary, Alberta, Canada.Connect with me on LinkedIn (Mohammad Sameer Malek) and GitHub (SameerMalek).",
   info: [
     {
       fieldName: "Name",
@@ -50,7 +50,6 @@ const about = {
       fieldName: "Nationality",
       fieldValue: "Indian",
     },
-
   ],
 };
 
@@ -58,7 +57,7 @@ const education = {
   icon: "/assets/resume/cap.svg",
   title: "My Education",
   description:
-    "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, quibusdam iusto itaque sit doloremque corrupti. Consectetur esse deserunt nemo voluptate vitae reprehenderit, labore commodi laborum, harum perspiciatis, similique corporis doloribus.",
+    "I am pursuing a Diploma in Software Development at the Southern Alberta Institute of Technology. Previously, I completed my Higher and Senior Secondary Education at Hanifa English Medium School in Gujarat, India.",
   items: [
     {
       institution: "Southern Alberta Institute of Technology, AB, Canada",
@@ -81,7 +80,7 @@ const education = {
 const skills = {
   title: "My Skills",
   description:
-    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque numquam cumque atque magnam delectus earum. Laudantium, qui",
+    "I am proficient in HTML5, CSS3, JavaScript, Node.js, React.js, Next.js, Tailwind CSS, Java, Figma, MongoDB, Python, and Bootstrap. My skill set enables me to create dynamic and responsive digital solutions.",
   skillList: [
     {
       icon: <FaHtml5 />,
@@ -218,7 +217,7 @@ function Resume() {
             <TabsContent value="about" className="w-full text-center xl:text-left">
               <div className="flex flex-col gap-[30px]">
                 <h3 className="text-4xl font-bold">{about.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{about.description}
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0 xl:mb-[35px]">{about.description}
                 </p>
               </div>
               <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 ">

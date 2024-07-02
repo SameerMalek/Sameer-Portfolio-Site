@@ -29,8 +29,7 @@ const Home = () => {
             <br />
             <h1 className="h21 mt-6 mb-8">Developer!</h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I excel at crafting elegant digital experiences and I am
-              proficient in various programming languages and technologies.
+            As a passionate and knowledgeable developer, I specialize in crafting seamless digital experiences using full-stack web development technologies, ensuring high standards in every project.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
             <a

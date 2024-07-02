@@ -7,29 +7,29 @@ const services = [
     num: "01",
     title: "Web Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eveniet quaerat tenetur, recusandae placeat rerum.",
-    href: "",
+      "I build responsive and dynamic web applications using the MERN stack and WebSocket IO for real-time features.",
+    href:"/webDevelopment",
   },
   {
     num: "02",
     title: "UI/UX Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eveniet quaerat tenetur, recusandae placeat rerum.",
-    href: "",
+      "I create user-friendly, visually appealing designs with Figma, React JS, HTML, CSS, Tailwind, and Bootstrap.",
+    href:"/uiUxDev",
   },
   {
     num: "03",
     title: "Mobile-App Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eveniet quaerat tenetur, recusandae placeat rerum.",
-    href: "",
+      "I develop high-performance, cross-platform mobile apps with React Native for both iOS and Android.",
+    href:"/mobileAppDev",
   },
   {
     num: "04",
     title: "Database Development",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed eveniet quaerat tenetur, recusandae placeat rerum.",
-    href: "",
+      "I design and maintain efficient databases with MySQL, PL/SQL, and MongoDB for optimal performance.",
+    href:"/databaseDev",
   },
 ];
 

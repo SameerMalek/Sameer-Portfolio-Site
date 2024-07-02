@@ -66,8 +66,7 @@ function Contact() {
             >
               <h3 className="text-4xl text-accent">Let's Work Together!</h3>
               <p className="text-white/60">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
-                id vitae libero necessitatibus deleniti tenetur?
+              Whether you're looking to create something new or improve an existing project, I'm here to bring your vision to life or collaborate.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Input
