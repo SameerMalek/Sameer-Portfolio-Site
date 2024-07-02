@@ -16,7 +16,7 @@ import { SiTailwindcss, SiNextdotjs, SiBootstrap } from "react-icons/si";
 const about = {
   title: "About me",
   description:
-    "I am Mohammad Sameer Malek, a Software Development enthusiast fluent in English, Hindi, Urdu, and Gujarati. Currently available for Software Developer or Fullstack developer related roles. I am based in Calgary, Alberta, Canada.Connect with me on LinkedIn (Mohammad Sameer Malek) and GitHub (SameerMalek).",
+    "I am Mohammad Sameer Malek, a Software Development enthusiast fluent in English, Hindi, Urdu, and Gujarati. Currently available for Software Developer or Fullstack developer related roles. I am based in Calgary, Alberta, Canada. Connect with me on LinkedIn (Mohammad Sameer Malek) and GitHub (SameerMalek).",
   info: [
     {
       fieldName: "Name",
