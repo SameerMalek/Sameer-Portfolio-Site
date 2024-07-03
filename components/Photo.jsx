@@ -34,7 +34,7 @@ const Photo = () => {
             quality={100}
             fill
             alt="Profile-Image"
-            className="object-contain cursor-pointer"
+            className="object-contain cursor-pointer boxshadow"
           />
         </motion.div>
         <motion.svg

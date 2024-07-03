@@ -5,4 +5,8 @@
 .mix-blend-remove {
     mix-blend-mode: lighten;
   }
+
+.boxshadow{
+  filter: drop-shadow(1px 1px 6px white);
+}
   

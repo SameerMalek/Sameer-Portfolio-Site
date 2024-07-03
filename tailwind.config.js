@@ -32,6 +32,9 @@ module.exports = {
           hover:'#00e187',
         },
       },
+      boxShadow: {
+        'custom-white': '0 35px 35px rgba(255, 255, 255, 0.3)',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
