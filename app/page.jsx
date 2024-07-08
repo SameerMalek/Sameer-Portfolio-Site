@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import { FiDownload } from "react-icons/fi";
 import Photo from "@/components/Photo";
 const Home = () => {
-  const cvUrl = "/CV.pdf";
+  const cvUrl = "/M_Sameer_Resume.pdf";
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
