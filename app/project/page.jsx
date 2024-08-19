@@ -2,17 +2,18 @@
 import { delay, motion } from "framer-motion";
 import React, { useState } from "react";
 import Link from "next/link";
-import {FaLinkedinIn} from "react-icons/fa"
+import { FaLinkedinIn } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import WorkSlider from '@/components/WorkSlider.jsx';
+import WorkSlider from "@/components/WorkSlider.jsx";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import Image from "next/image";
 
 const projects = [
   {
@@ -21,14 +22,21 @@ const projects = [
     title: "Project 1",
     description:
       "TazaKhabar is a live news site developed with React.js, fetching data from the News API to display news across various categories.",
-    stack: [{ name: "React.js" },{ name: "Html" }, { name: "Bootstrap" },{ name: "CSS" }, { name: "Javascript" }],
+    stack: [
+      { name: "React.js" },
+      { name: "Html" },
+      { name: "Bootstrap" },
+      { name: "CSS" },
+      { name: "Javascript" },
+    ],
     video: "/assets/project/project-1.mp4",
-    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
+    linkedin:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
     github: "https://github.com/SameerMalek/Taza-Khabar-NewsSite",
   },
   {
     num: "02",
-    category: "MERN-stack", 
+    category: "MERN-stack",
     title: "Project 2",
     description:
       "Estate-Ease optimizes property transactions with a robust backend that manages server logic, data, APIs for property listings, and secure user authentication.",
@@ -43,7 +51,8 @@ const projects = [
       { name: "WebSocket.io" },
     ],
     video: "/assets/project/project-2.mp4",
-    linkedin: "https://www.linkedin.com/feed/update/urn:li:activity:7202656339985063936/",
+    linkedin:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7202656339985063936/",
     github: "https://github.com/SameerMalek/Estate-Ease-FullStack",
   },
   {
@@ -73,10 +82,30 @@ const projects = [
       { name: "Css" },
       { name: "Javascript" },
       { name: "Node.js" },
-      { name: "EJS" }
+      { name: "EJS" },
     ],
     video: "/assets/project/project-4.mp4",
     github: "https://github.com/SameerMalek/QuickLink",
+  },
+  {
+    num: "05",
+    category: "Next.js Fullstack",
+    title: "Project 5",
+    description:
+      "JOBQUEST: A Job Portal, to find and post jobs, developed using Next.js and Tailwind CSS.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "Javascript" },
+      { name: "React.js" },
+      { name: "Stripe" },
+      { name: "MongoDB" },
+      { name: "Clerk" },
+      { name: "Supabase" },
+    ],
+    image: "/assets/project-5.png",
+    live: "https://job-portal-site-one.vercel.app/",
+    github: "https://github.com/SameerMalek/Job-Portal-App",
   },
 ];
 
@@ -120,19 +149,21 @@ function Project() {
               </ul>
               <div className="border border-white/20"></div>
               <div className="flex items-center gap-4">
-               {project.live && ( <Link  target="_blank" href={project.live}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Visit Project</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>)}
-               
+                {project.live && (
+                  <Link target="_blank" href={project.live}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Visit Project</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
+
                 <Link target="_blank" href={project.github}>
                   <TooltipProvider delayDuration={100}>
                     <Tooltip>
@@ -145,25 +176,27 @@ function Project() {
                     </Tooltip>
                   </TooltipProvider>
                 </Link>
-                {project.linkedin && ( <Link  target="_blank" href={project.linkedin}>
-                  <TooltipProvider delayDuration={100}>
-                    <Tooltip>
-                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                        <FaLinkedinIn className="text-white text-3xl group-hover:text-accent" />
-                      </TooltipTrigger>
-                      <TooltipContent>
-                        <p>Visit Project on LinkedIn</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                </Link>)}
+                {project.linkedin && (
+                  <Link target="_blank" href={project.linkedin}>
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                          <FaLinkedinIn className="text-white text-3xl group-hover:text-accent" />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>Visit Project on LinkedIn</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
               </div>
             </div>
           </div>
           <div className="w-full xl:w-[50%]">
             <Swiper
               spaceBetween={30}
-              slideperview ={1}
+              slideperview={1}
               className="xl:h-[520px] mb-12"
               onSlideChange={handleSlideChange}
             >
@@ -173,19 +206,29 @@ function Project() {
                     <div className=" relative group flex justify-center items-center bg-pink-50/20 pointer-events-none">
                       <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                       <div className="relative w-full h-full">
-                        <video
-                          src={project.video}
-                          className="xl:h-[329px] relative 
-                          group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
-                          controls
-                        />
+                        {project.video ? (
+                          <video
+                            src={project.video}
+                            className="xl:h-[329px] relative group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
+                            controls
+                          />
+                        ) : (
+                          <Image
+                            src={project.image}
+                            width={1200}
+                            height={300} 
+                            className="relative group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
+                            alt={`${project.title} image`}
+                          />
+                        )}
                       </div>
                     </div>
                   </SwiperSlide>
                 );
               })}
-              <WorkSlider containerStyles ="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-[75px] z-20 w-full justify-between xl:w-max xl:justify-none"
-              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all "
+              <WorkSlider
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-[75px] z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all "
               />
             </Swiper>
           </div>
