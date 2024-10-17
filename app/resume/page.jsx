@@ -23,16 +23,8 @@ const about = {
       fieldValue: "Mohammad Sameer Malek",
     },
     {
-      fieldName: "Phone",
-      fieldValue: "(+1) 825 288 2786",
-    },
-    {
       fieldName: "Github",
       fieldValue: "SameerMalek",
-    },
-    {
-      fieldName: "Email",
-      fieldValue: "maleksameer715@gmail.com",
     },
     {
       fieldName: "Languages",

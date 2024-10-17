@@ -8,11 +8,7 @@ const socials = [
   {
     icon: <FaLinkedinIn />,
     path: "https://www.linkedin.com/in/mohammad-sameer-malek-032866222/"
-  },
-  {
-    icon: <FaInstagram />,
-    path: "https://www.instagram.com/maleksameer315/"
-  },
+  }
 ];
 const Socials = ({ containerStyles, iconStyles }) => {
   return (
