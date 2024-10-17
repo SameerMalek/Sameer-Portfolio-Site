@@ -20,16 +20,6 @@ import { useForm, ValidationError } from "@formspree/react";
 
 const info = [
   {
-    icon: <FaPhoneAlt />,
-    title: "Phone",
-    description: "(+1) 825 288 2786",
-  },
-  {
-    icon: <FaEnvelope />,
-    title: "Email",
-    description: "maleksameer715@gmail.com",
-  },
-  {
     icon: <FaMapMarkedAlt />,
     title: "Address",
     description: "Calgary, Alberta, Canada",
