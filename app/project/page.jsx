@@ -18,26 +18,48 @@ import Image from "next/image";
 const projects = [
   {
     num: "01",
-    category: "React.Js",
-    title: "Project 1",
+    category: "Fullstack MERN",
+    title: "Calgary Wholesale Tires : B2B E-Commerce Site",
     description:
-      "TazaKhabar is a live news site developed with React.js, fetching data from the News API to display news across various categories.",
+      "An e-commerce platform for a Calgary-based client that streamlines inventory tracking, real-time order processing, and secure payment integration, addressing outdated system issues while supporting scalability.",
     stack: [
       { name: "React.js" },
-      { name: "Html" },
-      { name: "Bootstrap" },
+      { name: "Node.js" },
+      { name: "Express.js" },
+      { name: "MongoDB" },
+      { name: "Prisma" },
+      { name: "Stripe" },
       { name: "CSS" },
-      { name: "Javascript" },
+      { name: "JWT Authentication" },
     ],
-    video: "/assets/project/project-1.mp4",
-    linkedin:
-      "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
-    github: "https://github.com/SameerMalek/Taza-Khabar-NewsSite",
+    image: "/assets/homepage.png",
+    live: "https://calgary-wholesale-tires.onrender.com/",
+    github: "https://github.com/SameerMalek/Calgary-Wholesale-Tires",
   },
   {
     num: "02",
+    category: "Next.js Fullstack",
+    title: "JOBQUEST: A Job Portal",
+    description:
+      "JOBQUEST: A Job Portal, to find and post jobs, developed using Next.js and Tailwind CSS.",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind CSS" },
+      { name: "Javascript" },
+      { name: "React.js" },
+      { name: "Stripe" },
+      { name: "MongoDB" },
+      { name: "Clerk" },
+      { name: "Supabase" },
+    ],
+    image: "/assets/project-5.png",
+    live: "https://job-portal-site-one.vercel.app/",
+    github: "https://github.com/SameerMalek/Job-Portal-App",
+  },
+  {
+    num: "03",
     category: "MERN-stack",
-    title: "Project 2",
+    title: "Estate-Ease : Property-Listing Site",
     description:
       "Estate-Ease optimizes property transactions with a robust backend that manages server logic, data, APIs for property listings, and secure user authentication.",
     stack: [
@@ -56,9 +78,27 @@ const projects = [
     github: "https://github.com/SameerMalek/Estate-Ease-FullStack",
   },
   {
-    num: "03",
+    num: "04",
     category: "React.Js",
-    title: "Project 3",
+    title: "TazaKhabar : News Site",
+    description:
+      "TazaKhabar is a live news site developed with React.js, fetching data from the News API to display news across various categories.",
+    stack: [
+      { name: "React.js" },
+      { name: "Html" },
+      { name: "Bootstrap" },
+      { name: "CSS" },
+      { name: "Javascript" },
+    ],
+    video: "/assets/project/project-1.mp4",
+    linkedin:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7183473840423940096/",
+    github: "https://github.com/SameerMalek/Taza-Khabar-NewsSite",
+  },
+  {
+    num: "05",
+    category: "React.Js",
+    title: "TextUtils",
     description:
       "TextUtils is a text formatting tool built with React and React Router DOM, simplifies text manipulation with features like text capitalization, spacing adjustments, and easy clipboard copying for enhanced usability.",
     stack: [
@@ -72,9 +112,9 @@ const projects = [
     github: "https://github.com/SameerMalek/Text-Formatting-Site",
   },
   {
-    num: "04",
+    num: "06",
     category: "Backend",
-    title: "Project 4",
+    title: "QuickLink",
     description:
       "QuickLink generates short, unique IDs for URLs using the npm package 'shortid', facilitating easy search and retrieval of specific URLs.",
     stack: [
@@ -86,26 +126,6 @@ const projects = [
     ],
     video: "/assets/project/project-4.mp4",
     github: "https://github.com/SameerMalek/QuickLink",
-  },
-  {
-    num: "05",
-    category: "Next.js Fullstack",
-    title: "Project 5",
-    description:
-      "JOBQUEST: A Job Portal, to find and post jobs, developed using Next.js and Tailwind CSS.",
-    stack: [
-      { name: "Next.js" },
-      { name: "Tailwind CSS" },
-      { name: "Javascript" },
-      { name: "React.js" },
-      { name: "Stripe" },
-      { name: "MongoDB" },
-      { name: "Clerk" },
-      { name: "Supabase" },
-    ],
-    image: "/assets/project-5.png",
-    live: "https://job-portal-site-one.vercel.app/",
-    github: "https://github.com/SameerMalek/Job-Portal-App",
   },
 ];
 
@@ -203,27 +223,29 @@ function Project() {
               {projects.map((project, index) => {
                 return (
                   <SwiperSlide key={index} className="w-full">
-                    <div className=" relative group flex justify-center items-center bg-pink-50/20 pointer-events-none">
-                      <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
-                      <div className="relative w-full h-full">
-                        {project.video ? (
-                          <video
-                            src={project.video}
-                            className="xl:h-[329px] relative group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
-                            controls
-                          />
-                        ) : (
-                          <Image
-                            src={project.image}
-                            width={1200}
-                            height={300} 
-                            className="relative group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
-                            alt={`${project.title} image`}
-                          />
-                        )}
-                      </div>
+                  <div className="relative group flex flex-col justify-center items-center bg-pink-50/20 pointer-events-none">
+                    <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
+                    <div className="relative w-full h-full">
+                      {project.video ? (
+                        <video
+                          src={project.video}
+                          className="xl:h-[329px] relative group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
+                          controls
+                        />
+                      ) : (
+                        <Image
+                          src={project.image}
+                          width={1200}
+                          height={300}
+                          className="relative group flex justify-center items-center bg-pink-50/20 pointer-events-auto"
+                          alt={`${project.title} image`}
+                        />
+                      )}
                     </div>
-                  </SwiperSlide>
+                    {/* Add the project title here */}
+                    <h3 className="text-white text-xl font-bold">{project.title}</h3>
+                  </div>
+                </SwiperSlide>
                 );
               })}
               <WorkSlider
