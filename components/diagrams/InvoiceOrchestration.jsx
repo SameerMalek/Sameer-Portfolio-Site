@@ -44,8 +44,8 @@ const EDGES = [
   ["sched", "recon"], ["recon", "drive"], ["err", "notify"],
 ];
 
-const W = 124;
-const H = 46;
+const W = 118;
+const H = 40;
 const map = Object.fromEntries(NODES.map((n) => [n.id, n]));
 
 function edgePath(a, b) {
@@ -100,15 +100,15 @@ const InvoiceOrchestration = () => {
                   strokeWidth={n.hot ? 1.8 : 1.2}
                 />
                 {/* icon badge */}
-                <rect x={n.x + 8} y={n.y - 11} width="22" height="22" rx="5" fill={c} fillOpacity="0.16" stroke={c} strokeOpacity="0.5" />
-                <text x={n.x + 19} y={n.y + 3.5} textAnchor="middle" fontSize="9" fontWeight="700" fill={c}>
+                <rect x={n.x + 7} y={n.y - 9} width="18" height="18" rx="4.5" fill={c} fillOpacity="0.16" stroke={c} strokeOpacity="0.5" />
+                <text x={n.x + 16} y={n.y + 2.5} textAnchor="middle" fontSize="7.5" fontWeight="700" fill={c}>
                   {n.badge}
                 </text>
                 {/* labels */}
-                <text x={n.x + 38} y={n.y - 1} fontSize="10.5" fontWeight="600" fill="#ffffff" fillOpacity="0.88">
+                <text x={n.x + 31} y={n.y - 2} fontSize="9" fontWeight="600" fill="#ffffff" fillOpacity="0.88">
                   {n.title}
                 </text>
-                <text x={n.x + 38} y={n.y + 11} fontSize="8.5" fill="#ffffff" fillOpacity="0.4">
+                <text x={n.x + 31} y={n.y + 8.5} fontSize="7" fill="#ffffff" fillOpacity="0.4">
                   {n.sub}
                 </text>
               </g>
