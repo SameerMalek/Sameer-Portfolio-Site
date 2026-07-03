@@ -22,6 +22,19 @@ function Visual({ cs }) {
       </div>
     );
   }
+  if (cs.image) {
+    return (
+      <div className="rounded-xl border border-white/10 overflow-hidden bg-[#0b0f14]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={cs.image}
+          alt={`${cs.title} preview`}
+          className="w-full h-auto"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
   return (
     <div className="aspect-video">
       <CaseDiagram kind={cs.diagram} />

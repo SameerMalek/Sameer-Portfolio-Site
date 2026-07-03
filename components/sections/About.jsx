@@ -20,7 +20,7 @@ const About = () => {
               <img
                 src="/assets/profile3.png"
                 alt="Sameer Malek"
-                className="relative rounded-2xl w-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                className="relative rounded-2xl w-full object-cover"
                 loading="lazy"
               />
             </div>
