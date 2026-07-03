@@ -1,49 +1,42 @@
 "use client";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { useState } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { navLinks } from "@/lib/content";
 
-const links = [
-  {
-    name: 'Home',
-    path: '/'
-  },
-  {
-    name: 'Services',
-    path: '/services'
-  },
-  {
-    name: 'Resume',
-    path: '/resume'
-  },
-  {
-    name: 'Project',
-    path: '/project'
-  },
-  {
-    name: 'Contact',
-    path: '/contact'
-  }
-];
 const MobileNav = () => {
-  const pathname = usePathname();
+  const [open, setOpen] = useState(false);
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger className="flex justify-center items-center">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
-        <div className="mt-32 mb-20 text-center text-2xl">
-            <Link href={"/"}>
-            <h1 className="text-4xl font-semibold">Sameer<span className="text-accent">.</span></h1></Link>
+      <SheetContent className="flex flex-col bg-primary border-white/10">
+        <div className="mt-24 mb-16 text-center text-2xl">
+          <a href="#top" onClick={() => setOpen(false)}>
+            <h1 className="text-4xl font-semibold">
+              Sameer<span className="text-accent">.</span>
+            </h1>
+          </a>
         </div>
         <nav className="flex flex-col justify-center items-center gap-8">
-            {links.map((link,index)=>{
-                return <Link href={link.path} key={index} className={`${link.path===pathname && "text-accent border-b-2 border-accent transition-all"} text-xl hover:text-accent transition-all`}>
-                    {link.name}
-                </Link>
-            })}
+          {navLinks.map((link) => (
+            <a
+              href={link.path}
+              key={link.name}
+              onClick={() => setOpen(false)}
+              className="text-xl text-white/80 hover:text-accent transition-all"
+            >
+              {link.name}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="mt-4 bg-accent text-primary font-semibold px-6 py-2.5 rounded-full"
+          >
+            Hire me
+          </a>
         </nav>
       </SheetContent>
     </Sheet>

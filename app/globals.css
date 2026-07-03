@@ -3,8 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-padding-top: 84px;
+  }
+  section[id] {
+    scroll-margin-top: 84px;
+  }
   body {
-    @apply font-primary bg-primary text-white leading-loose;
+    @apply font-primary bg-primary text-white;
   }
   .h1{
     @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
