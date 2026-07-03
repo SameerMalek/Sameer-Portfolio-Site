@@ -1,6 +1,6 @@
 "use client";
 import { FiDownload } from "react-icons/fi";
-import { about, profile } from "@/lib/content";
+import { about, profile, experience, education, certifications } from "@/lib/content";
 import SectionHeading from "@/components/site/SectionHeading";
 import Reveal from "@/components/site/Reveal";
 
@@ -23,6 +23,25 @@ const About = () => {
                 className="relative rounded-2xl w-full object-cover"
                 loading="lazy"
               />
+            </div>
+
+            <div className="mt-10 max-w-[280px] mx-auto lg:mx-0">
+              <p className="text-white/40 uppercase text-[11px] tracking-widest mb-3">Education</p>
+              <p className="text-white font-medium text-sm">{education.school}</p>
+              <p className="text-white/55 text-sm mt-0.5">{education.program}</p>
+              <p className="text-white/40 text-xs mt-1">
+                {education.detail} · {education.period}
+              </p>
+
+              <p className="text-white/40 uppercase text-[11px] tracking-widest mb-3 mt-8">Certifications</p>
+              <ul className="space-y-1.5">
+                {certifications.map((c) => (
+                  <li key={c} className="text-white/55 text-sm flex gap-2">
+                    <span className="text-accent/70">›</span>
+                    {c}
+                  </li>
+                ))}
+              </ul>
             </div>
           </Reveal>
 
@@ -48,6 +67,24 @@ const About = () => {
               Download resume
               <FiDownload className="group-hover:translate-y-0.5 transition-transform" />
             </a>
+
+            {/* Experience timeline */}
+            <div className="mt-12">
+              <p className="text-white/40 uppercase text-[11px] tracking-widest mb-6">Experience</p>
+              <div className="relative border-l border-white/10 pl-6 space-y-8">
+                {experience.map((e) => (
+                  <div key={e.role} className="relative">
+                    <span className="absolute -left-[26px] top-1.5 w-2.5 h-2.5 rounded-full bg-accent ring-4 ring-primary" />
+                    <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1">
+                      <h3 className="text-white font-semibold">{e.role}</h3>
+                      <span className="text-white/40 text-xs whitespace-nowrap">{e.period}</span>
+                    </div>
+                    <p className="text-accent/80 text-sm mt-0.5">{e.org}</p>
+                    <p className="text-white/55 text-[15px] leading-relaxed mt-3">{e.blurb}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </Reveal>
         </div>
       </div>

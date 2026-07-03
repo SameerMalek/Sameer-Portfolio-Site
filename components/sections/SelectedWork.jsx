@@ -7,8 +7,20 @@ import SectionHeading from "@/components/site/SectionHeading";
 import Reveal from "@/components/site/Reveal";
 import CaseDiagram from "@/components/diagrams/CaseDiagram";
 import InvoiceOrchestration from "@/components/diagrams/InvoiceOrchestration";
+import AutomationDiagram from "@/components/diagrams/AutomationDiagram";
+import MeridianDiagram from "@/components/diagrams/MeridianDiagram";
+
+const COMPONENTS = {
+  meridian: MeridianDiagram,
+  orchestration: InvoiceOrchestration,
+  automation: AutomationDiagram,
+};
 
 function Visual({ cs }) {
+  if (cs.component && COMPONENTS[cs.component]) {
+    const Cmp = COMPONENTS[cs.component];
+    return <Cmp />;
+  }
   if (cs.video) {
     return (
       <div className="relative rounded-xl border border-white/10 overflow-hidden bg-black aspect-video">
@@ -120,36 +132,6 @@ function CaseText({ cs }) {
 
 function CaseRow({ cs, i }) {
   const flip = i % 2 === 1;
-
-  // Wide cases (n8n orchestration graph, Meridian architecture) get a
-  // full-width diagram beneath the write-up so the labels stay legible.
-  if (cs.orchestration || cs.wide) {
-    return (
-      <Reveal>
-        <article>
-          <div className="max-w-3xl">
-            <CaseText cs={cs} />
-          </div>
-          <div className="mt-10">
-            {cs.orchestration ? (
-              <InvoiceOrchestration />
-            ) : (
-              <div className="rounded-xl border border-white/10 overflow-hidden bg-[#0b0f14]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={cs.image}
-                  alt={`${cs.title} architecture`}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-            )}
-          </div>
-        </article>
-      </Reveal>
-    );
-  }
-
   return (
     <Reveal>
       <article className="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-14 items-center">
