@@ -49,6 +49,22 @@ const DotGrid = () => {
       raf = requestAnimationFrame(draw);
     };
 
+    let visible = true;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        if (visible && !reduce) {
+          cancelAnimationFrame(raf);
+          raf = requestAnimationFrame(draw);
+        } else {
+          cancelAnimationFrame(raf);
+          if (reduce) draw(0);
+        }
+      },
+      { threshold: 0 }
+    );
+    io.observe(canvas);
+
     if (reduce) {
       draw(0);
     } else {
@@ -57,6 +73,7 @@ const DotGrid = () => {
 
     return () => {
       cancelAnimationFrame(raf);
+      io.disconnect();
       window.removeEventListener("resize", resize);
     };
   }, []);
