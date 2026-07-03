@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1320 600" width="1320" height="600" font-family="'Berkeley Mono','JetBrains Mono','SFMono-Regular',ui-monospace,monospace">
+  <defs>
+    <style>
+      .card   { fill:#0b0f14; stroke:#1b2632; stroke-width:1.5; }
+      .node   { fill:#0e151c; stroke:#26384a; stroke-width:1.5; }
+      .accent { fill:#0c1a17; stroke:#34d399; stroke-width:2; }
+      .fan    { stroke:#2f6b5d; stroke-width:1.3; fill:none; opacity:.5; }
+      .spine  { stroke:#34d399; stroke-width:2.4; fill:none; opacity:.9; }
+      .flow   { stroke:#2f6b5d; stroke-width:1.6; fill:none; opacity:.8; }
+      .lbl    { fill:#8fa3b0; font-size:14px; }
+      .sub    { fill:#5c6f7d; font-size:11px; letter-spacing:.4px; }
+      .subg   { fill:#4f9e86; font-size:11px; letter-spacing:.4px; }
+      .prov   { fill:#c7d3dc; font-size:13px; }
+      .dr     { fill:#4f9e86; font-size:10px; letter-spacing:.5px; }
+      .title  { fill:#55707e; font-size:15px; letter-spacing:3px; }
+      .eval   { fill:#34d399; font-size:14px; letter-spacing:1px; }
+      .dot    { fill:#34d399; }
+    </style>
+    <marker id="arwG" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#34d399"/>
+    </marker>
+    <marker id="arwT" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2f6b5d"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="20" width="1280" height="560" rx="22" class="card"/>
+  <text x="56" y="64" class="title">MULTI-PROVIDER DEEP RESEARCH  →  EVIDENCE CLAIM GRAPH  →  GROUNDED CONDENSE  →  RAGAS GATE</text>
+
+  <!-- ===== flow lines (under nodes) ===== -->
+  <line x1="130" y1="300" x2="182" y2="300" class="flow" marker-end="url(#arwT)"/>
+  <line x1="281" y1="300" x2="307" y2="300" class="flow" marker-end="url(#arwT)"/>
+  <!-- fan-out -->
+  <line x1="310" y1="300" x2="438" y2="125" class="fan"/>
+  <line x1="310" y1="300" x2="438" y2="195" class="fan"/>
+  <line x1="310" y1="300" x2="438" y2="265" class="fan"/>
+  <line x1="310" y1="300" x2="438" y2="335" class="fan"/>
+  <line x1="310" y1="300" x2="438" y2="405" class="fan"/>
+  <line x1="310" y1="300" x2="438" y2="475" class="fan"/>
+  <!-- fan-in -->
+  <line x1="660" y1="125" x2="710" y2="300" class="fan"/>
+  <line x1="660" y1="195" x2="710" y2="300" class="fan"/>
+  <line x1="660" y1="265" x2="710" y2="300" class="fan"/>
+  <line x1="660" y1="335" x2="710" y2="300" class="fan"/>
+  <line x1="660" y1="405" x2="710" y2="300" class="fan"/>
+  <line x1="660" y1="475" x2="710" y2="300" class="fan"/>
+  <!-- grounding spine (bright + arrows) -->
+  <line x1="710" y1="300" x2="736" y2="300" class="spine" marker-end="url(#arwG)"/>
+  <line x1="900" y1="300" x2="951" y2="300" class="spine" marker-end="url(#arwG)"/>
+  <line x1="1075" y1="300" x2="1151" y2="300" class="spine" marker-end="url(#arwG)"/>
+
+  <!-- ===== request / plan ===== -->
+  <circle cx="106" cy="300" r="20" class="accent"/>
+  <line x1="98" y1="300" x2="114" y2="300" stroke="#34d399" stroke-width="2"/>
+  <text x="106" y="346" text-anchor="middle" class="lbl">request</text>
+  <text x="106" y="363" text-anchor="middle" class="sub">profile + inputs</text>
+
+  <rect x="185" y="276" width="96" height="48" rx="10" class="node"/>
+  <text x="233" y="297" text-anchor="middle" class="lbl">plan</text>
+  <text x="233" y="313" text-anchor="middle" class="sub">decompose · route</text>
+
+  <!-- ===== provider fan-out : each a DEEP RESEARCH ===== -->
+  <g>
+    <rect x="438" y="99" width="222" height="52" rx="9" class="node"/>
+    <circle cx="460" cy="120" r="3.5" class="dot"/><text x="476" y="124" class="prov">gemini 3.1 pro</text>
+    <text x="476" y="141" class="dr">web-grounded deep research</text>
+
+    <rect x="438" y="169" width="222" height="52" rx="9" class="node"/>
+    <circle cx="460" cy="190" r="3.5" class="dot"/><text x="476" y="194" class="prov">claude opus 4.8</text>
+    <text x="476" y="211" class="dr">web-grounded deep research</text>
+
+    <rect x="438" y="239" width="222" height="52" rx="9" class="node"/>
+    <circle cx="460" cy="260" r="3.5" class="dot"/><text x="476" y="264" class="prov">claude sonnet 4.6</text>
+    <text x="476" y="281" class="dr">web-grounded deep research</text>
+
+    <rect x="438" y="309" width="222" height="52" rx="9" class="node"/>
+    <circle cx="460" cy="330" r="3.5" class="dot"/><text x="476" y="334" class="prov">openai deep-research</text>
+    <text x="476" y="351" class="dr">web-grounded deep research</text>
+
+    <rect x="438" y="379" width="222" height="52" rx="9" class="node"/>
+    <circle cx="460" cy="400" r="3.5" class="dot"/><text x="476" y="404" class="prov">deepseek v4</text>
+    <text x="476" y="421" class="dr">web-grounded deep research</text>
+
+    <rect x="438" y="449" width="222" height="52" rx="9" class="node"/>
+    <circle cx="460" cy="470" r="3.5" class="dot"/><text x="476" y="474" class="prov">perplexity</text>
+    <text x="476" y="491" class="dr">web-grounded deep research</text>
+  </g>
+  <text x="549" y="528" text-anchor="middle" class="sub">cost-ordered · depth-gated: quick 3 · standard 5 · exhaustive 8</text>
+
+  <!-- ===== grounding chain (green sublabels highlight the anti-hallucination path) ===== -->
+  <rect x="740" y="270" width="160" height="60" rx="12" class="node"/>
+  <text x="820" y="296" text-anchor="middle" class="lbl">claim graph</text>
+  <text x="820" y="314" text-anchor="middle" class="subg">link · contradict</text>
+
+  <rect x="955" y="270" width="120" height="60" rx="14" class="accent"/>
+  <text x="1015" y="296" text-anchor="middle" class="lbl">synth</text>
+  <text x="1015" y="314" text-anchor="middle" class="subg">grounded condense</text>
+
+  <line x1="1113" y1="262" x2="1113" y2="338" stroke="#34d399" stroke-width="1.6" stroke-dasharray="4 6"/>
+  <text x="1113" y="252" text-anchor="middle" class="eval">eval</text>
+  <text x="1113" y="356" text-anchor="middle" class="subg">RAGAS gate</text>
+
+  <rect x="1155" y="272" width="110" height="56" rx="12" class="node"/>
+  <text x="1210" y="296" text-anchor="middle" class="lbl">report</text>
+  <text x="1210" y="313" text-anchor="middle" class="sub">3 deliverables</text>
+</svg>

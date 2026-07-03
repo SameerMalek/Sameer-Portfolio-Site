@@ -121,9 +121,9 @@ function CaseText({ cs }) {
 function CaseRow({ cs, i }) {
   const flip = i % 2 === 1;
 
-  // Orchestration case gets a full-width diagram beneath the write-up so the
-  // n8n node graph stays legible.
-  if (cs.orchestration) {
+  // Wide cases (n8n orchestration graph, Meridian architecture) get a
+  // full-width diagram beneath the write-up so the labels stay legible.
+  if (cs.orchestration || cs.wide) {
     return (
       <Reveal>
         <article>
@@ -131,7 +131,19 @@ function CaseRow({ cs, i }) {
             <CaseText cs={cs} />
           </div>
           <div className="mt-10">
-            <InvoiceOrchestration />
+            {cs.orchestration ? (
+              <InvoiceOrchestration />
+            ) : (
+              <div className="rounded-xl border border-white/10 overflow-hidden bg-[#0b0f14]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={cs.image}
+                  alt={`${cs.title} architecture`}
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
+            )}
           </div>
         </article>
       </Reveal>
