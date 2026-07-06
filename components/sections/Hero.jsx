@@ -43,9 +43,9 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1 variants={item} className="h1 max-w-4xl">
-              Most AI projects die between the{" "}
-              <span className="text-accent">demo</span> and the{" "}
-              <span className="text-accent">deployment</span>.
+              I build <span className="text-accent">production-grade</span>,{" "}
+              <span className="text-accent">secure</span> AI systems, then
+              stay long enough to watch real businesses run on them.
             </motion.h1>
 
             <motion.p variants={item} className="mt-8 max-w-2xl text-white/70 text-base xl:text-lg leading-relaxed">

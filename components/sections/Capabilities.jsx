@@ -10,7 +10,7 @@ const Capabilities = () => {
         <SectionHeading
           kicker="Capabilities"
           title="Five pillars, each with the work that proves it."
-          intro="No skill bars, no percentage circles, because self-assigned percentages are noise."
+          intro="In a given month I might be building multi-agent research pipelines with automated evals, wiring an MCP server so agents can act inside a CRM, training computer vision models to read construction drawings, debugging a document-extraction pipeline that teaches itself from its own corrections, or keeping an automation layer running a company's back office. Different domains, same job: turn something ambiguous into something that runs itself."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">

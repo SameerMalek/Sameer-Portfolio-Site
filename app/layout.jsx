@@ -15,7 +15,7 @@ export const metadata = {
   metadataBase: new URL("https://sameer-portfolio-site.vercel.app"),
   title: "Sameer Malek | Forward-Deployed AI Engineer, Calgary",
   description:
-    "I live in the gap between the demo and the deployment. Co-Founder and CIO of Orchestrator AI Systems in Calgary, working forward-deployed: embedded inside client businesses, shipping production AI, agent, and vision systems end to end.",
+    "I build production-grade, secure AI systems, then stay long enough to watch real businesses run on them. Co-Founder and CIO of Orchestrator AI Systems in Calgary, working forward-deployed: embedded inside client businesses, shipping production AI, agent, and vision systems end to end.",
   keywords: [
     "Forward-Deployed Engineer",
     "AI Engineer",
@@ -31,7 +31,7 @@ export const metadata = {
     type: "website",
     title: "Sameer Malek | Forward-Deployed AI Engineer, Calgary",
     description:
-      "I live in the gap between the demo and the deployment. Production AI, agent, and vision systems, shipped and run end to end.",
+      "I build production-grade, secure AI systems, then stay long enough to watch real businesses run on them.",
     url: "https://sameer-portfolio-site.vercel.app",
     siteName: "Sameer Malek",
   },
@@ -39,7 +39,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Sameer Malek | Forward-Deployed AI Engineer, Calgary",
     description:
-      "I live in the gap between the demo and the deployment. Production AI, agent, and vision systems, shipped and run end to end.",
+      "I build production-grade, secure AI systems, then stay long enough to watch real businesses run on them.",
   },
 };
 
