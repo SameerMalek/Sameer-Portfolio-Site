@@ -11,7 +11,7 @@ const Shipped = () => {
         <SectionHeading
           kicker="Things I've shipped"
           title="Products, tools, and platforms in daily use."
-          intro="One line each, linked where public. No client login URLs."
+          intro="What it does, why it exists, and the stack, linked where public. No client login URLs."
         />
 
         <div className="divide-y divide-white/10 border-y border-white/10">
@@ -38,6 +38,18 @@ const Shipped = () => {
                   </div>
                   <p className="md:col-span-6 text-white/60 text-[15px] leading-relaxed">{s.what}</p>
                   <p className="md:col-span-3 text-white/35 text-sm leading-relaxed">{s.why}</p>
+                  {s.stack && (
+                    <div className="md:col-start-4 md:col-span-9 flex flex-wrap gap-2 mt-3 md:mt-1">
+                      {s.stack.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[11px] px-2.5 py-1 rounded-full border border-white/10 text-white/50 group-hover:border-accent/40 group-hover:text-white/70 transition-colors"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </Wrapper>
               </Reveal>
             );

@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 import { FiArrowRight, FiArrowDownRight } from "react-icons/fi";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
@@ -30,7 +31,7 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto">
-        <div className="min-h-[86vh] flex flex-col justify-center py-24 xl:py-28">
+        <div className="pt-40 xl:pt-48 pb-24 xl:pb-28">
           <motion.div variants={container} initial="hidden" animate="show" className="max-w-4xl">
             <motion.div variants={item} className="flex items-center gap-3 mb-8">
               <span className="relative flex h-2 w-2">
@@ -44,9 +45,18 @@ const Hero = () => {
 
             <motion.h1 variants={item} className="h1 max-w-4xl">
               I build <span className="text-accent">production-grade</span>,{" "}
-              <span className="text-accent">secure</span> AI systems, then
-              stay long enough to watch real businesses run on them.
+              <span className="text-accent">secure</span> AI systems.
             </motion.h1>
+
+            <motion.div variants={item} className="mt-3 xl:mt-4 min-h-[1.4em]">
+              <TypeAnimation
+                sequence={[500, hero.typed]}
+                wrapper="p"
+                speed={60}
+                cursor
+                className="text-xl sm:text-2xl xl:text-3xl font-semibold text-white/90"
+              />
+            </motion.div>
 
             <motion.p variants={item} className="mt-8 max-w-2xl text-white/70 text-base xl:text-lg leading-relaxed">
               {hero.sub}

@@ -1,10 +1,8 @@
 "use client";
 import { FiDownload } from "react-icons/fi";
-import { about, profile, experience, education, certifications } from "@/lib/content";
+import { about, profile, experience, education, certifications, skills } from "@/lib/content";
 import SectionHeading from "@/components/site/SectionHeading";
 import Reveal from "@/components/site/Reveal";
-
-const tech = ["TypeScript", "Python", "React", "Next.js", "FastAPI", "Postgres", "GCP"];
 
 const About = () => {
   return (
@@ -48,14 +46,21 @@ const About = () => {
           <Reveal delay={0.1} className="lg:col-span-2">
             <p className="text-white/70 text-lg leading-relaxed">{about}</p>
 
-            <div className="flex flex-wrap gap-2 mt-8">
-              {tech.map((t) => (
-                <span
-                  key={t}
-                  className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-white/60"
-                >
-                  {t}
-                </span>
+            <div className="mt-10 space-y-6">
+              {skills.map((group) => (
+                <div key={group.group}>
+                  <p className="text-white/40 uppercase text-[11px] tracking-widest mb-3">{group.group}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {group.items.map((t) => (
+                      <span
+                        key={t}
+                        className="text-xs px-3 py-1.5 rounded-full border border-white/10 text-white/60"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
 
