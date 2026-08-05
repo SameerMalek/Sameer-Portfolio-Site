@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
-import { FiArrowRight, FiArrowDownRight } from "react-icons/fi";
+import { FiArrowRight, FiArrowDownRight, FiDownload } from "react-icons/fi";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { hero, profile } from "@/lib/content";
@@ -62,7 +62,7 @@ const Hero = () => {
               {hero.sub}
             </motion.p>
 
-            <motion.div variants={item} className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+            <motion.div variants={item} className="mt-10 flex flex-col sm:flex-row sm:flex-wrap items-start sm:items-center gap-5">
               <a
                 href={hero.primaryCta.href}
                 className="group inline-flex items-center gap-2 bg-accent text-primary font-semibold px-7 py-3.5 rounded-full hover:bg-accent-hover transition-all duration-300"
@@ -76,6 +76,14 @@ const Hero = () => {
               >
                 {hero.secondaryCta.label}
                 <FiArrowDownRight className="text-lg group-hover:translate-y-0.5 transition-transform" />
+              </a>
+              <a
+                href={profile.resume}
+                download
+                className="group inline-flex items-center gap-2 border border-white/15 text-white px-7 py-3.5 rounded-full hover:border-accent hover:text-accent transition-all duration-300"
+              >
+                Download resume
+                <FiDownload className="text-lg group-hover:translate-y-0.5 transition-transform" />
               </a>
 
               <div className="flex items-center gap-3 sm:ml-2">
